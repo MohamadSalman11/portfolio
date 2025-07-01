@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Footer } from './shared/footer/footer.component';
+import { MainComponent } from './main/main.component';
+import { ContactComponent } from './main/contact/contact.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [MainComponent, Footer],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
-  protected title = 'portfolio';
+  protected title = 'sakura';
 }
