@@ -1,0 +1,34 @@
+@import "variables";
+
+.me {
+  &__container {
+    display: flex;
+    justify-content: center;
+    column-gap: 8rem;
+  }
+
+  &__location-box {
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+    font-size: 3rem;
+
+    & > span {
+      white-space: nowrap;
+      span {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__description-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    max-width: 75rem;
+  }
+
+  & a {
+    align-self: flex-end;
+  }
+}
