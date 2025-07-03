@@ -1,0 +1,79 @@
+@import "variables";
+
+.projects {
+  padding: 4.8rem;
+  width: 100%;
+  background-color: $color-secondary-light;
+
+  &__container {
+    max-width: 192rem;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12.8rem;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 12.8rem;
+
+      @media (max-width: 75em) {
+        column-gap: 6.4rem;
+      }
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__info-box {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.8rem;
+
+    & > div {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 2.4rem;
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.6rem;
+      }
+    }
+  }
+
+  &__img-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    text-align: center;
+
+    & > img {
+      border-radius: 24px;
+    }
+  }
+
+  &__tools,
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2.4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+    background: linear-gradient(#89bcd9, #7dabc5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
