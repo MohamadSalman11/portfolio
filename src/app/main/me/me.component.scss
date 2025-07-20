@@ -1,10 +1,18 @@
 @import "variables";
 
 .me {
+  margin-top: $section-gap;
+
   &__container {
     display: flex;
     justify-content: center;
     column-gap: 8rem;
+
+    @media (max-width: $TabPort) {
+      align-items: center;
+      flex-direction: column;
+      row-gap: 3.2rem;
+    }
   }
 
   &__location-box {
@@ -17,6 +25,22 @@
       white-space: nowrap;
       span {
         color: $color-primary;
+      }
+    }
+
+    @media (max-width: $TabPort) {
+      font-size: 2.4rem;
+
+      img {
+        width: 5rem;
+      }
+    }
+
+    @media (max-width: $Phone) {
+      font-size: 2rem;
+
+      img {
+        width: 4rem;
       }
     }
   }

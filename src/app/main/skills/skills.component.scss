@@ -1,6 +1,8 @@
 @import "variables";
 
 .skills {
+  margin-top: $section-gap;
+
   &__list {
     display: flex;
     justify-content: center;

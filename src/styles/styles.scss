@@ -14,13 +14,13 @@ html {
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  color: $color-white;
-  background-color: $color-secondary;
+  color: $color-secondary;
+  background-color: $color-white;
   font-size: 1.8rem;
   line-height: 1.5;
 
   section {
-    padding: 2.4rem;
+    padding: 3.2rem;
 
     &:not(.projects) {
       max-width: 192rem;
@@ -55,11 +55,18 @@ a {
   font-size: 6rem;
   color: $color-primary;
   font-family: "Anta", sans-serif;
-  margin-bottom: 6.4rem;
-  margin-top: 12.8rem;
+  margin-bottom: 4.8rem;
 
-  @media (max-width: 112.5em) {
+  @media (max-width: $Desktop) {
     font-size: 4.4rem;
+  }
+
+  @media (max-width: $TabLand) {
+    font-size: 3.6rem;
+  }
+
+  @media (max-width: $Phone) {
+    font-size: 2.8rem;
   }
 }
 
@@ -71,9 +78,15 @@ a {
   cursor: pointer;
   transition: all 0.2s;
 
+  @media (max-width: $TabPort) {
+    padding: 1rem 2.4rem;
+    font-size: 1.6rem;
+  }
+
   &--filled {
     background-color: $color-primary;
     border: none;
+    color: $color-white;
   }
 
   &--outline {
@@ -84,6 +97,6 @@ a {
 
   &:hover {
     background-color: $color-primary-light;
-    color: $color-secondary;
+    color: $color-white;
   }
 }

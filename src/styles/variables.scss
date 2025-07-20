@@ -1,6 +1,15 @@
-$color-primary: #89bcd9;
-$color-primary-light: #7dabc5;
-$color-secondary: #262e34;
-$color-secondary-light: #2d3840;
-$color-white: #f8f5ec;
-$color-red: #c84646;
+$color-primary: #4070f4;
+$color-primary-light: #668df6;
+$color-primary-light-2: #c6d4fc;
+$color-primary-light-3: #ecf1fe;
+$color-secondary: #122734;
+$color-secondary-light: #2a3d48;
+$color-white: #ffffff;
+
+$section-gap: 6.4rem;
+
+// Breakpoints
+$Desktop: 112.5em;
+$TabLand: 78.125em;
+$TabPort: 59.375em;
+$Phone: 37.5em;

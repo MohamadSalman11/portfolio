@@ -3,17 +3,24 @@
 .projects {
   padding: 4.8rem;
   width: 100%;
-  background-color: $color-secondary-light;
+  margin-top: $section-gap;
+  background-color: $color-primary-light-3;
 
   &__container {
     max-width: 192rem;
     margin: 0 auto;
   }
 
+  &__technologies-text {
+    @media (max-width: $TabLand) {
+      display: none;
+    }
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
-    row-gap: 12.8rem;
+    row-gap: 8rem;
     list-style: none;
 
     li {
@@ -26,14 +33,21 @@
         column-gap: 6.4rem;
       }
 
-      &:nth-child(even) {
-        flex-direction: row-reverse;
+      @media (max-width: $TabLand) {
+        flex-direction: column-reverse;
+      }
+
+      @media (min-width: $TabLand) {
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
       }
     }
   }
 
   &__info-box {
-    width: 60rem;
+    width: 100%;
+    max-width: 65rem;
     display: flex;
     flex-direction: column;
     row-gap: 4.8rem;
@@ -41,12 +55,25 @@
     & > div {
       display: flex;
       align-items: flex-start;
-      column-gap: 2.4rem;
+      gap: 2.4rem;
+
+      @media (max-width: $Phone) {
+        flex-direction: column;
+      }
 
       & > div {
         display: flex;
         flex-direction: column;
         row-gap: 1.6rem;
+      }
+    }
+
+    @media (max-width: $TabLand) {
+      margin-top: 5.4rem;
+      max-width: 85rem;
+
+      h3 {
+        display: none;
       }
     }
   }
@@ -59,6 +86,17 @@
 
     & > img {
       border-radius: 24px;
+      box-shadow: 0 0rem 3rem rgba(0, 0, 0, 0.1);
+
+      @media (max-width: $Phone) {
+        width: 30rem;
+      }
+    }
+  }
+
+  &__tools img {
+    @media (max-width: $Phone) {
+      width: 5rem;
     }
   }
 
@@ -72,8 +110,6 @@
 
   h3 {
     font-size: 3rem;
-    background: linear-gradient(#89bcd9, #7dabc5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $color-primary;
   }
 }

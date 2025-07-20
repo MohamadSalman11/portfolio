@@ -3,6 +3,7 @@
 .contact {
   padding: 4rem;
   position: relative;
+  margin-top: $section-gap;
 
   &__container {
     max-width: 100rem;
@@ -39,7 +40,6 @@
 
   &__icon {
     width: 2rem;
-    height: 2rem;
   }
 
   &__form {
@@ -51,6 +51,10 @@
   &__form-row {
     display: flex;
     gap: 2rem;
+
+    @media (max-width: $Phone) {
+      flex-direction: column;
+    }
   }
 
   &__form-group {
@@ -72,7 +76,6 @@
     border: 1px solid $color-primary-light;
     border-radius: 2.4rem;
     background-color: transparent;
-    color: $color-white;
     font-size: 1.4rem;
     outline: none;
 
@@ -107,7 +110,7 @@
   &__button {
     align-self: flex-end;
     padding: 0.8rem 2.4rem;
-    background-color: $color-secondary;
+    background-color: $color-white;
     border: 1px solid $color-primary-light;
     border-radius: 2.4rem;
     color: $color-primary-light;
@@ -126,9 +129,8 @@
     cursor: pointer;
 
     img {
-      @media (max-width: 112.5em) {
+      @media (max-width: $Desktop) {
         width: 2.6rem;
-        height: 6rem;
       }
     }
   }

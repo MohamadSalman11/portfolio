@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: $section-gap;
 
   &__description {
     text-align: center;
@@ -19,7 +20,8 @@
     row-gap: 4.8rem;
     column-gap: 1.2rem;
     margin-top: 9.6rem;
-    width: 140rem;
+    width: 100%;
+    max-width: 140rem;
 
     li {
       div {
@@ -37,12 +39,15 @@
 
       img {
         transition: transform 0.3s;
-        box-shadow: 0 4rem 5rem rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0rem 5rem rgba(0, 0, 0, 0.25);
         border-radius: 12px;
         width: 30rem;
-        height: 16.9rem;
         transform: rotateY(37deg);
         cursor: pointer;
+
+        @media (max-width: $TabPort) {
+          width: 25rem;
+        }
 
         &:hover {
           transform: rotateY(37deg) scale(1.1);
@@ -67,10 +72,10 @@
     position: absolute;
     top: 0;
     right: 10%;
-    background-color: $color-red;
+    background-color: $color-primary;
+    color: $color-white;
     border-radius: 50%;
     width: 2.5rem;
-    height: 2.5rem;
     font-size: 1rem;
     transition: opacity 0.3s;
   }

@@ -4,42 +4,69 @@
   padding: 12.8rem;
   padding-bottom: 0;
 
-  @media (max-width: 75em) {
-    padding: 12.8rem 2.4rem;
+  @media (max-width: $TabLand) {
+    padding: 9.6rem;
   }
 
-  @media (max-width: 75em) {
-    padding: 8.8rem 2.4rem;
+  @media (max-width: $TabPort) {
+    padding: 3.2rem;
+    margin-top: 6.4rem;
+  }
+
+  @media (max-width: $Phone) {
+    padding: 2.4rem;
   }
 
   &__container {
+    position: relative;
     display: flex;
     column-gap: 8rem;
+    align-items: center;
     justify-content: space-evenly;
     margin: 0 auto;
     width: 100%;
 
-    @media (max-width: 75em) {
-      column-gap: 3.2rem;
+    @media (max-width: $TabPort) {
+      flex-direction: column;
+      row-gap: 3.2rem;
     }
   }
 
   &__logo {
     margin-bottom: 5.2rem;
+
+    @media (max-width: $TabLand) {
+      width: 5rem;
+      margin-bottom: 2.4rem;
+    }
+
+    @media (max-width: $TabPort) {
+      display: none;
+    }
   }
 
   &__img-box {
     position: relative;
     user-select: none;
+
+    @media (max-width: $TabPort) {
+      width: fit-content;
+      position: static;
+    }
   }
 
   &__text-box {
+    position: relative;
     font-family: "Anta", sans-serif;
-    color: $color-white;
+    color: $color-secondary;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 1.2rem;
+
+    @media (max-width: $TabPort) {
+      position: static;
+    }
   }
 
   &__img {
@@ -48,42 +75,72 @@
     top: -4.1rem;
     transform: translateX(-50%);
 
-    @media (max-width: 112.5em) {
-      width: 43rem;
-      height: 45.5rem;
+    @media (max-width: $Desktop) {
+      width: 45rem;
     }
 
-    @media (max-width: 75em) {
-      width: 35.5rem;
-      height: 37.6rem;
+    @media (max-width: $TabLand) {
+      width: 35rem;
+    }
+
+    @media (max-width: $TabPort) {
+      top: 6%;
+      border-radius: 200px;
+    }
+
+    @media (max-width: $Phone) {
+      width: 30rem;
+      top: 3.5%;
     }
   }
 
   &__bg-shape {
-    @media (max-width: 112.5em) {
-      width: 37rem;
-      height: 41rem;
+    @media (max-width: $Desktop) {
+      width: 40rem;
     }
 
-    @media (max-width: 75em) {
+    @media (max-width: $TabLand) {
       width: 30rem;
-      height: 33.3rem;
+    }
+
+    @media (max-width: $TabPort) {
+      width: 35rem;
+    }
+
+    @media (max-width: $Phone) {
+      width: 30rem;
     }
   }
 
   &__title {
     font-size: 8.6rem;
 
-    @media (max-width: 112.5em) {
-      font-size: 5.2rem;
+    @media (max-width: $Desktop) {
+      font-size: 6.2rem;
+    }
+
+    @media (max-width: $TabLand) {
+      font-size: 4.4rem;
+    }
+
+    @media (max-width: $Phone) {
+      font-size: 3rem;
     }
   }
 
   &__subtitle {
     font-size: 4rem;
 
-    @media (max-width: 112.5em) {
+    @media (max-width: $Desktop) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: $TabLand) {
       font-size: 2.4rem;
+    }
+
+    @media (max-width: $Phone) {
+      font-size: 1.4rem;
     }
   }
 
@@ -91,29 +148,113 @@
     margin-top: 12.8rem;
     cursor: pointer;
 
-    @media (max-width: 112.5em) {
-      margin-top: 2.4rem;
-      width: 2.6rem;
-      height: 6rem;
+    @media (max-width: $Desktop) {
+      margin-top: 4rem;
+      width: 3rem;
     }
 
-    @media (max-width: 75em) {
-      width: 1.7rem;
-      height: 4rem;
-      margin-top: 0rem;
+    @media (max-width: $TabLand) {
+      margin-top: 3rem;
+      width: 2rem;
+    }
+
+    @media (max-width: $TabPort) {
+      width: 3rem;
     }
   }
 
   &__social-icons {
     position: absolute;
-    top: 9.5%;
-    right: 5%;
+    top: -4%;
+    right: -3%;
     display: flex;
     flex-direction: column;
     row-gap: 1.6rem;
 
+    @media (max-width: $Desktop) {
+      right: -7%;
+    }
+
     & img {
       cursor: pointer;
+
+      @media (max-width: $Desktop) {
+        width: 2.5rem;
+      }
+    }
+
+    @media (max-width: $TabPort) {
+      top: 0%;
+      right: 1%;
+    }
+
+    @media (max-width: $TabPort) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+
+    @media (max-width: $Desktop) {
+      width: 4rem;
+    }
+
+    @media (max-width: $TabLand) {
+      width: 3rem;
+    }
+
+    &-circle {
+      left: 48%;
+      top: 8%;
+
+      @media (max-width: $TabPort) {
+        left: 90%;
+        top: 40%;
+      }
+    }
+
+    &-triangle {
+      right: -15%;
+      bottom: 25%;
+
+      @media (max-width: $TabPort) {
+        right: 8%;
+        bottom: 20%;
+      }
+    }
+
+    &-square {
+      left: -20%;
+      top: 40%;
+
+      @media (max-width: $TabPort) {
+        left: 10%;
+      }
+    }
+
+    &-blank {
+      left: 2%;
+      bottom: 20%;
+
+      @media (max-width: $TabPort) {
+        left: 10%;
+        bottom: 0;
+      }
+    }
+
+    &-curved-line {
+      left: -10%;
+      top: -7%;
+
+      @media (max-width: $TabPort) {
+        left: 10%;
+        top: 7%;
+      }
+    }
+
+    @media (max-width: $Phone) {
+      display: none;
     }
   }
 }
