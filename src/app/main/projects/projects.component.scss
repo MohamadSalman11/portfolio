@@ -84,6 +84,12 @@
     row-gap: 2.4rem;
     text-align: center;
 
+    @media (min-width: $TabPort) {
+      h3 {
+        display: none;
+      }
+    }
+
     & > img {
       border-radius: 24px;
       box-shadow: 0 0rem 3rem rgba(0, 0, 0, 0.1);
