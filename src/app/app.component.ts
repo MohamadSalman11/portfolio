@@ -8,10 +8,4 @@ import { FooterComponent } from './shared/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  isDE = false;
-
-  setLanguage(de: boolean) {
-    this.isDE = de;
-  }
-}
+export class AppComponent {}

@@ -22,7 +22,7 @@ import { CoursesComponent } from './courses/courses.component';
   templateUrl: './main.component.html',
 })
 export class MainComponent {
-  isDE = false;
+  isDE = true;
 
   setLanguage(de: boolean) {
     this.isDE = de;
