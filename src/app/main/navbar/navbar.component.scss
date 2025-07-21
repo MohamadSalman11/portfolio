@@ -38,18 +38,25 @@
     width: 4rem;
   }
 
-  &__icon-menu {
+  &__icon {
     display: none;
     position: absolute;
-    top: 1.7rem;
-    right: 2rem;
-    width: 2.6rem;
+
+    &-menu {
+      top: 1.7rem;
+      right: 2rem;
+      width: 2.6rem;
+    }
+
+    &-close {
+      top: 2%;
+      right: 3.5%;
+    }
 
     @media (max-width: $TabPort) {
       display: block;
     }
   }
-
   &__container {
     display: flex;
     align-items: center;
@@ -64,15 +71,20 @@
 
     @media (max-width: $TabPort) {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 1rem;
+      right: 1rem;
       flex-direction: column;
       background-color: $color-primary;
-      width: 30rem;
-      border-radius: 50%;
+      border-radius: 50% 12px 50% 50%;
       padding: 3.2rem;
       row-gap: 3.2rem;
+      box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
       display: none;
+      width: 30rem;
+
+      &--open {
+        display: flex;
+      }
     }
   }
 

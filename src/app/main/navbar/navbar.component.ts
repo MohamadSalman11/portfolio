@@ -10,7 +10,17 @@ export class NavbarComponent {
   @Input() isDE!: boolean;
   @Output() languageChange = new EventEmitter<boolean>();
 
+  isMenuOpen = false;
+
   setLanguage(de: boolean) {
     this.languageChange.emit(de);
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 }

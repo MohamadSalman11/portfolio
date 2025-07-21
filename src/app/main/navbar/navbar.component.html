@@ -1,9 +1,23 @@
 <div class="navbar">
   <img class="navbar__logo-blue" src="/logo-blue.png" alt="logo" />
-  <img class="navbar__icon-menu" src="/icons/menu.png" alt="icon menu" />
+  <img
+    class="navbar__icon-menu navbar__icon"
+    src="/icons/menu.png"
+    alt="icon menu"
+    (click)="toggleMenu()"
+  />
 
-  <div class="navbar__container max-width">
+  <div
+    class="navbar__container max-width"
+    [class.navbar__container--open]="isMenuOpen"
+  >
     <img class="navbar__logo-white" src="/logo-white.png" alt="logo" />
+    <img
+      class="navbar__icon-close navbar__icon"
+      src="/icons/close.png"
+      alt="icon close"
+      (click)="closeMenu()"
+    />
 
     <nav>
       <ul class="navbar__list">
