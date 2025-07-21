@@ -29,21 +29,71 @@
         </p>
       </div>
     </div>
-    <form class="contact__form">
+    <form
+      class="contact__form"
+      (ngSubmit)="onSubmit(contactForm)"
+      #contactForm="ngForm"
+    >
       <div class="contact__form-row">
         <div class="contact__form-group">
           <label for="name" class="contact__label">Your name</label>
-          <input type="text" id="name" class="contact__input" />
+          <input
+            [(ngModel)]="contactData.name"
+            name="name"
+            #name="ngModel"
+            type="text"
+            id="name"
+            class="contact__input"
+            required
+          />
+          <span
+            *ngIf="!name.valid && contactForm.submitted"
+            class="contact__error-text"
+          >
+            Please enter your name
+          </span>
         </div>
+
         <div class="contact__form-group">
           <label for="email" class="contact__label">Your Email</label>
-          <input type="email" id="email" class="contact__input" />
+          <input
+            [(ngModel)]="contactData.email"
+            name="email"
+            #email="ngModel"
+            type="email"
+            id="email"
+            class="contact__input"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            required
+          />
+          <span
+            *ngIf="!email.valid && contactForm.submitted"
+            class="contact__error-text"
+          >
+            Please enter a valid email address
+          </span>
         </div>
       </div>
+
       <div class="contact__form-group">
         <label for="message" class="contact__label">Your Message</label>
-        <textarea id="message" rows="6" class="contact__textarea"></textarea>
+        <textarea
+          [(ngModel)]="contactData.message"
+          #message="ngModel"
+          name="message"
+          id="message"
+          rows="6"
+          class="contact__textarea"
+          required
+        ></textarea>
+        <span
+          *ngIf="!message.valid && contactForm.submitted"
+          class="contact__error-text"
+        >
+          Please enter a message
+        </span>
       </div>
+
       <div class="contact__checkbox">
         <input type="checkbox" id="privacy" class="contact__checkbox-input" />
         <label for="privacy" class="contact__checkbox-label">
@@ -51,7 +101,8 @@
           agree to the processing of my data as outlined.
         </label>
       </div>
-      <button class="contact__button" type="submit" disabled>Send</button>
+
+      <button class="contact__button" type="submit">Send</button>
     </form>
   </div>
 

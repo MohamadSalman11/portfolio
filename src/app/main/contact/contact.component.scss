@@ -115,11 +115,7 @@
     border-radius: 2.4rem;
     color: $color-primary-light;
     font-size: 1.4rem;
-    cursor: not-allowed;
-
-    &[disabled] {
-      opacity: 0.6;
-    }
+    cursor: pointer;
   }
 
   .arrow-up-link {
@@ -133,5 +129,12 @@
         width: 2.6rem;
       }
     }
+  }
+
+  &__error-text {
+    font-size: 1.2rem;
+    margin-left: 0.8rem;
+    margin-top: 0.2rem;
+    color: $color-red;
   }
 }
