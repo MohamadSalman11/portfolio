@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-courses',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss',
 })
-export class CoursesComponent {}
+export class CoursesComponent {
+  @Input() isDE!: boolean;
+}

@@ -8,25 +8,26 @@
     <nav>
       <ul class="navbar__list">
         <li>
-          <a href="#me">Why Me</a>
+          <a href="#me">{{ isDE ? "Warum Ich" : "Why Me" }}</a>
         </li>
         <li>
           <a href="#skills">Skills</a>
         </li>
         <li>
-          <a href="#projects">Projects</a>
+          <a href="#projects">{{ isDE ? "Projekte" : "Projects" }}</a>
         </li>
         <li>
-          <a href="#courses">Courses</a>
+          <a href="#courses">{{ isDE ? "Kurse" : "Courses" }}</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact">{{ isDE ? "Kontakt" : "Contact" }}</a>
         </li>
       </ul>
     </nav>
+
     <div class="navbar__language-box">
-      <span>DE</span>
-      <span class="active">EN</span>
+      <span (click)="setLanguage(true)" [class.active]="isDE">DE</span>
+      <span (click)="setLanguage(false)" [class.active]="!isDE">EN</span>
     </div>
   </div>
 </div>

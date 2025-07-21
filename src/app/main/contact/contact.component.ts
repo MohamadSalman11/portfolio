@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  @Input() isDE!: boolean;
+
   contactData = {
     name: '',
     email: '',

@@ -1,7 +1,7 @@
-<app-hero></app-hero>
-<app-navbar></app-navbar>
-<app-me></app-me>
-<app-skills></app-skills>
-<app-projects></app-projects>
-<app-courses></app-courses>
-<app-contact></app-contact>
+<app-hero [isDE]="isDE"></app-hero>
+<app-navbar [isDE]="isDE" (languageChange)="setLanguage($event)"></app-navbar>
+<app-me [isDE]="isDE"></app-me>
+<app-skills [isDE]="isDE"></app-skills>
+<app-projects [isDE]="isDE"></app-projects>
+<app-courses [isDE]="isDE"></app-courses>
+<app-contact [isDE]="isDE"></app-contact>

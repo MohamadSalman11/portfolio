@@ -1,5 +1,7 @@
 <section class="projects" id="projects">
-  <h2 class="heading-secondary">My Projects</h2>
+  <h2 class="heading-secondary">
+    {{ isDE ? "Meine Projekte" : "My Projects" }}
+  </h2>
   <div class="projects__container">
     <ul class="projects__list">
       <li>
@@ -8,41 +10,54 @@
           <div>
             <img src="/ellipse.png" alt="ellipse" />
             <div>
-              <h4>About the project</h4>
+              <h4>{{ isDE ? "Über das Projekt" : "About the project" }}</h4>
               <p>
-                Wepify ist ein moderner Website-Builder, mit dem man einfach und
-                schnell eigene Webseiten erstellen kann – ganz ohne
-                Programmierkenntnisse.
+                {{
+                  isDE
+                    ? "Wepify ist ein moderner Website-Builder, mit dem man einfach und schnell eigene Webseiten erstellen kann – ganz ohne Programmierkenntnisse."
+                    : "Wepify is a modern website builder that lets you create your own websites easily and quickly – no programming skills required."
+                }}
               </p>
               <p>
-                Wepify bietet eine benutzerfreundliche Oberfläche, mit der
-                Inhalte individuell gestaltet und flexibel angepasst werden
-                können.
+                {{
+                  isDE
+                    ? "Wepify bietet eine benutzerfreundliche Oberfläche, mit der Inhalte individuell gestaltet und flexibel angepasst werden können."
+                    : "Wepify offers a user-friendly interface that allows content to be customized individually and adapted flexibly."
+                }}
               </p>
             </div>
           </div>
           <div>
             <img src="/ellipse.png" alt="ellipse" />
             <div>
-              <h4>How I have organized my work process</h4>
+              <h4>
+                {{
+                  isDE
+                    ? "Wie ich meinen Arbeitsprozess organisiert habe"
+                    : "How I have organized my work process"
+                }}
+              </h4>
               <p>
-                Für das Projekt habe ich zuerst die passenden Werkzeuge und
-                Technologien ausgewählt. Dann habe ich geplant, welche
-                Komponenten benötigt werden und welche davon wiederverwendbar
-                sind.
+                {{
+                  isDE
+                    ? "Für das Projekt habe ich zuerst die passenden Werkzeuge und Technologien ausgewählt. Dann habe ich geplant, welche Komponenten benötigt werden und welche davon wiederverwendbar sind."
+                    : "For the project, I first selected the appropriate tools and technologies. Then I planned which components are needed and which of them are reusable."
+                }}
               </p>
               <p>
-                Dabei habe ich eine weit verbreitete, feature-basierte
-                Architektur verwendet, um den Code übersichtlich und wartbar zu
-                gestalten. Außerdem habe ich bewährte Best Practices angewendet,
-                damit der Code sauber, gut strukturiert und leicht erweiterbar
-                bleibt.
+                {{
+                  isDE
+                    ? "Dabei habe ich eine weit verbreitete, feature-basierte Architektur verwendet, um den Code übersichtlich und wartbar zu gestalten. Außerdem habe ich bewährte Best Practices angewendet, damit der Code sauber, gut strukturiert und leicht erweiterbar bleibt."
+                    : "I used a widely adopted feature-based architecture to keep the code clear and maintainable. Additionally, I applied best practices to ensure the code remains clean, well-structured, and easily extendable."
+                }}
               </p>
             </div>
           </div>
         </div>
         <div class="projects__img-box">
-          <span class="projects__technologies-text">Technologies</span>
+          <span class="projects__technologies-text">{{
+            isDE ? "Technologien" : "Technologies"
+          }}</span>
           <h3>Wepify</h3>
           <div class="projects__tools">
             <img src="/skills/react.png" alt="react" />
@@ -51,8 +66,12 @@
           </div>
           <img src="/wepify.png" alt="screenshot" />
           <div class="projects__buttons">
-            <button class="button button--filled">Live Test</button>
-            <button class="button button--outline">GitHub</button>
+            <button class="button button--filled">
+              {{ isDE ? "Live Test" : "Live Test" }}
+            </button>
+            <button class="button button--outline">
+              {{ isDE ? "GitHub" : "GitHub" }}
+            </button>
           </div>
         </div>
       </li>
@@ -62,101 +81,138 @@
           <div>
             <img src="/ellipse.png" alt="ellipse" />
             <div>
-              <h4>About the project</h4>
+              <h4>{{ isDE ? "Über das Projekt" : "About the project" }}</h4>
               <p>
-                Lovit.js ist eine JavaScript-Bibliothek, mit der man Fehler in
-                Anwendungen klar und geordnet behandeln kann. Sie sorgt dafür,
-                dass man den Überblick behält und Fehler nicht chaotisch im
-                ganzen Code verteilt sind.
+                {{
+                  isDE
+                    ? "Lovit.js ist eine JavaScript-Bibliothek, mit der man Fehler in Anwendungen klar und geordnet behandeln kann. Sie sorgt dafür, dass man den Überblick behält und Fehler nicht chaotisch im ganzen Code verteilt sind."
+                    : "Lovit.js is a JavaScript library that allows clear and organized error handling in applications. It ensures you keep track and errors are not scattered chaotically throughout the code."
+                }}
               </p>
               <p>
-                Lovit macht es leichter, den Code sauber zu halten, und passt
-                sich gut an verschiedene Projekte an – egal ob im Browser oder
-                auf dem Server. Dadurch wird die Entwicklung angenehmer und
-                zuverlässiger.
+                {{
+                  isDE
+                    ? "Lovit macht es leichter, den Code sauber zu halten, und passt sich gut an verschiedene Projekte an – egal ob im Browser oder auf dem Server. Dadurch wird die Entwicklung angenehmer und zuverlässiger."
+                    : "Lovit makes it easier to keep the code clean and adapts well to different projects—whether in the browser or on the server. This makes development smoother and more reliable."
+                }}
               </p>
             </div>
           </div>
           <div>
             <img src="/ellipse.png" alt="ellipse" />
             <div>
-              <h4>How I have organized my work process</h4>
+              <h4>
+                {{
+                  isDE
+                    ? "Wie ich meinen Arbeitsprozess organisiert habe"
+                    : "How I have organized my work process"
+                }}
+              </h4>
               <p>
-                Zuerst habe ich ermittelt, wie die Fehlerbehandlung in
-                JavaScript einfacher und flexibler gestaltet werden kann, damit
-                sie in verschiedenen Situationen gut funktioniert.
+                {{
+                  isDE
+                    ? "Zuerst habe ich ermittelt, wie die Fehlerbehandlung in JavaScript einfacher und flexibler gestaltet werden kann, damit sie in verschiedenen Situationen gut funktioniert."
+                    : "First, I investigated how error handling in JavaScript can be made simpler and more flexible to work well in different situations."
+                }}
               </p>
               <p>
-                Danach habe ich die wichtigsten Funktionen definiert, die die
-                Bibliothek in der ersten Version enthalten soll.
+                {{
+                  isDE
+                    ? "Danach habe ich die wichtigsten Funktionen definiert, die die Bibliothek in der ersten Version enthalten soll."
+                    : "Then, I defined the key features that the library should include in the first version."
+                }}
               </p>
               <p>
-                Anschließend wurden alle Aufgaben in kleinere Schritte
-                aufgeteilt und sowohl die Bibliothek als auch die
-                Dokumentationsseite sorgfältig geplant.
+                {{
+                  isDE
+                    ? "Anschließend wurden alle Aufgaben in kleinere Schritte aufgeteilt und sowohl die Bibliothek als auch die Dokumentationsseite sorgfältig geplant."
+                    : "Next, all tasks were broken down into smaller steps, and both the library and the documentation site were carefully planned."
+                }}
               </p>
               <p>
-                Da es sich um eine Bibliothek handelt, war es besonders wichtig,
-                sicherzustellen, dass sie in unterschiedlichen Umgebungen
-                zuverlässig läuft.
+                {{
+                  isDE
+                    ? "Da es sich um eine Bibliothek handelt, war es besonders wichtig, sicherzustellen, dass sie in unterschiedlichen Umgebungen zuverlässig läuft."
+                    : "Since this is a library, it was especially important to ensure it runs reliably in different environments."
+                }}
               </p>
             </div>
           </div>
         </div>
         <div class="projects__img-box">
-          <span class="projects__technologies-text">Technologies</span>
-          <h3>Wepify</h3>
+          <span class="projects__technologies-text">{{
+            isDE ? "Technologien" : "Technologies"
+          }}</span>
+          <h3>Lovit</h3>
           <div class="projects__tools">
             <img src="/skills/react.png" alt="React" />
             <img src="/skills/ts.png" alt="typescript" />
-            <img src="/skills/tailwind.png" alt="firebase" />
+            <img src="/skills/tailwind.png" alt="Tailwind" />
           </div>
           <img src="/lovit.png" alt="Lovit JS" />
           <div class="projects__buttons">
-            <button class="button button--filled">Live Test</button>
-            <button class="button button--outline">GitHub</button>
+            <button class="button button--filled">
+              {{ isDE ? "Live Test" : "Live Test" }}
+            </button>
+            <button class="button button--outline">
+              {{ isDE ? "GitHub" : "GitHub" }}
+            </button>
           </div>
         </div>
       </li>
       <li>
         <div class="projects__info-box">
-          <h3>Wepify</h3>
+          <h3>Lux Gaming</h3>
           <div>
             <img src="/ellipse.png" alt="ellipse" />
             <div>
-              <h4>About the project</h4>
-              Lux Gaming ist eine statische, mehrseitige Gaming-Website, die ich
-              mit HTML und SCSS exakt nachgebaut habe. Das Projekt zeigt, dass
-              ich grundlegende Webtechnologien sicher beherrsche und
-              Designvorlagen präzise – ganz ohne Frameworks – umsetzen kann.
+              <h4>{{ isDE ? "Über das Projekt" : "About the project" }}</h4>
+              <p>
+                {{
+                  isDE
+                    ? "Lux Gaming ist eine statische, mehrseitige Gaming-Website, die ich mit HTML und SCSS exakt nachgebaut habe. Das Projekt zeigt, dass ich grundlegende Webtechnologien sicher beherrsche und Designvorlagen präzise – ganz ohne Frameworks – umsetzen kann."
+                    : "Lux Gaming is a static, multi-page gaming website that I recreated precisely using HTML and SCSS. The project demonstrates my solid command of fundamental web technologies and the ability to implement design mockups accurately—without any frameworks."
+                }}
+              </p>
             </div>
           </div>
           <div>
             <img src="/ellipse.png" alt="ellipse" />
             <div>
-              <h4>How I have organized my work process</h4>
+              <h4>
+                {{
+                  isDE
+                    ? "Wie ich meinen Arbeitsprozess organisiert habe"
+                    : "How I have organized my work process"
+                }}
+              </h4>
               <p>
-                Zuerst habe ich die Seite in verschiedene Bereiche aufgeteilt,
-                um den Überblick zu behalten. Dabei habe ich darauf geachtet,
-                den Code klar und strukturiert zu schreiben, damit er einfach zu
-                pflegen und zu erweitern ist. Für die Styles habe ich eine
-                saubere Ordnerstruktur und eine klare Benennung verwendet, damit
-                alles gut organisiert bleibt.
+                {{
+                  isDE
+                    ? "Zuerst habe ich die Seite in verschiedene Bereiche aufgeteilt, um den Überblick zu behalten. Dabei habe ich darauf geachtet, den Code klar und strukturiert zu schreiben, damit er einfach zu pflegen und zu erweitern ist. Für die Styles habe ich eine saubere Ordnerstruktur und eine klare Benennung verwendet, damit alles gut organisiert bleibt."
+                    : "First, I divided the site into different sections to keep track of everything. I made sure to write clear and structured code so it is easy to maintain and extend. For the styles, I used a clean folder structure and clear naming conventions to keep everything well organized."
+                }}
               </p>
             </div>
           </div>
         </div>
         <div class="projects__img-box">
-          <span class="projects__technologies-text">Technologies</span>
-          <h3>Wepify</h3>
+          <span class="projects__technologies-text">{{
+            isDE ? "Technologien" : "Technologies"
+          }}</span>
+          <h3>Lux Gaming</h3>
           <div class="projects__tools">
             <img src="/skills/html.png" alt="html" />
             <img src="/skills/sass.png" alt="sass" />
           </div>
           <img src="/lux.png" alt="screenshot" />
           <div class="projects__buttons">
-            <button class="button button--filled">Live Test</button>
-            <button class="button button--outline">GitHub</button>
+            <button class="button button--filled">
+              {{ isDE ? "Live Test" : "Live Test" }}
+            </button>
+            <button class="button button--outline">
+              {{ isDE ? "GitHub" : "GitHub" }}
+            </button>
           </div>
         </div>
       </li>

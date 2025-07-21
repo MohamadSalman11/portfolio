@@ -21,4 +21,10 @@ import { CoursesComponent } from './courses/courses.component';
   ],
   templateUrl: './main.component.html',
 })
-export class MainComponent {}
+export class MainComponent {
+  isDE = false;
+
+  setLanguage(de: boolean) {
+    this.isDE = de;
+  }
+}

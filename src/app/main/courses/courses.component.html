@@ -1,20 +1,23 @@
 <section class="courses" id="courses">
-  <h2 class="heading-secondary">My Courses</h2>
+  <h2 class="heading-secondary">{{ isDE ? "Meine Kurse" : "My Courses" }}</h2>
   <p class="courses__description">
-    Ich habe erfolgreich Webentwicklungskurse auf Udemy erstellt, an denen über
-    400 Teilnehmer teilgenommen haben. Durch die Erstellung dieser Kurse konnte
-    ich meine Fähigkeiten nicht nur im Programmieren, sondern auch im Lehren und
-    klaren Erklären komplexer Themen verbessern. Diese Erfahrung zeigt meine
-    Fähigkeit, Wissen zu vermitteln und andere beim Lernen der Webentwicklung zu
-    unterstützen.
+    {{
+      isDE
+        ? "Ich habe erfolgreich Webentwicklungskurse auf Udemy erstellt, an denen über 400 Teilnehmer teilgenommen haben. Durch die Erstellung dieser Kurse konnte ich meine Fähigkeiten nicht nur im Programmieren, sondern auch im Lehren und klaren Erklären komplexer Themen verbessern. Diese Erfahrung zeigt meine Fähigkeit, Wissen zu vermitteln und andere beim Lernen der Webentwicklung zu unterstützen."
+        : "I have successfully created web development courses on Udemy with over 400 participants. Through creating these courses, I improved my skills not only in programming but also in teaching and clearly explaining complex topics. This experience demonstrates my ability to share knowledge and help others learn web development."
+    }}
   </p>
   <ul class="courses__list">
     <li>
       <div>
         <img src="/course-fullstack.png" alt="fullstack course" />
-        <span class="courses__course-title"
-          >Full-Stack Web App mit HTML, CSS, JavaScript & Supabase</span
-        >
+        <span class="courses__course-title">
+          {{
+            isDE
+              ? "Full-Stack Web App mit HTML, CSS, JavaScript & Supabase"
+              : "Full-Stack Web App with HTML, CSS, JavaScript & Supabase"
+          }}
+        </span>
         <span class="courses__course-language">DE</span>
       </div>
     </li>
@@ -24,8 +27,12 @@
           src="/course-20-web-projects-de.png"
           alt="20 web projects (de) course"
         />
-        <span class="courses__course-title"
-          >20 Projekte mit HTML, CSS und JS: Moderne Webapps
+        <span class="courses__course-title">
+          {{
+            isDE
+              ? "20 Projekte mit HTML, CSS und JS: Moderne Webapps"
+              : "20 Projects with HTML, CSS & JS: Modern Web Apps"
+          }}
         </span>
         <span class="courses__course-language">DE</span>
       </div>
@@ -33,7 +40,13 @@
     <li>
       <div>
         <img src="/course-css-grid.png" alt="css grid course" />
-        <span class="courses__course-title">Advanced CSS Grid Course</span>
+        <span class="courses__course-title">
+          {{
+            isDE
+              ? "Fortgeschrittener CSS Grid Kurs"
+              : "Advanced CSS Grid Course"
+          }}
+        </span>
         <span class="courses__course-language">EN</span>
       </div>
     </li>
@@ -44,7 +57,11 @@
           alt="20 web projects (en) course"
         />
         <span class="courses__course-title">
-          20 Web Projects: HTML, CSS & Javascript
+          {{
+            isDE
+              ? "20 Webprojekte: HTML, CSS & Javascript"
+              : "20 Web Projects: HTML, CSS & Javascript"
+          }}
         </span>
         <span class="courses__course-language">EN</span>
       </div>
@@ -53,8 +70,12 @@
       <div>
         <img src="/course-clean-code.png" alt="clean code course" />
         <span class="courses__course-title">
-          Clean Code Komplettkurs 2025: Moderne Programmierung</span
-        >
+          {{
+            isDE
+              ? "Clean Code Komplettkurs 2025: Moderne Programmierung"
+              : "Clean Code Complete Course 2025: Modern Programming"
+          }}
+        </span>
         <span class="courses__course-language">DE</span>
       </div>
     </li>
@@ -63,6 +84,6 @@
     class="courses__profile-link"
     href="https://www.udemy.com/user/hamude-52/"
     target="_blank"
-    >View Profile &rightarrow;</a
+    >{{ isDE ? "Profil ansehen →" : "View Profile →" }}</a
   >
 </section>

@@ -1,41 +1,71 @@
 <section class="me" id="me">
-  <h2 class="heading-secondary">Why Me</h2>
+  <h2 class="heading-secondary">{{ isDE ? "Warum Ich" : "Why Me" }}</h2>
   <div class="me__container">
     <div class="me__location-box">
-      <img src="/icons/location.png" alt="icon location" />
-      <span><span>I am</span> located in Passau...|</span>
+      <img
+        src="/icons/location.png"
+        alt="{{ isDE ? 'Standort Symbol' : 'icon location' }}"
+      />
+      <span>
+        <span>{{ isDE ? "Ich bin" : "I am" }}</span>
+        {{ isDE ? "in Passau ansässig..." : "located in Passau..." }}|
+      </span>
     </div>
     <div class="me__description-box">
       <p>
-        Ich bin professioneller Frontend-Entwickler mit praktischer Erfahrung
-        und entwickle sauberen, skalierbaren und leistungsstarken Code mit Fokus
-        auf ansprechendes Design und solide Architektur. Sauberer Code,
-        sinnvolle Strukturen und nachhaltiges Denken sind für mich besonders
-        wichtig. Ich finde mich schnell in große Projekte ein und bringe mich
-        effektiv ein, um gemeinsam hochwertige Ergebnisse zu erzielen. Es macht
-        mir sehr viel Spaß, im Team zu arbeiten. Deshalb trage ich aktiv zu
-        großen Open-Source-Projekten wie
+        {{ isDE
+          ? `Ich bin professioneller Frontend-Entwickler mit praktischer Erfahrung
+            und entwickle sauberen, skalierbaren und leistungsstarken Code mit Fokus
+            auf ansprechendes Design und solide Architektur. Sauberer Code,
+            sinnvolle Strukturen und nachhaltiges Denken sind für mich besonders
+            wichtig. Ich finde mich schnell in große Projekte ein und bringe mich
+            effektiv ein, um gemeinsam hochwertige Ergebnisse zu erzielen. Es macht
+            mir sehr viel Spaß, im Team zu arbeiten. Deshalb trage ich aktiv zu
+            großen Open-Source-Projekten wie
+            `
+          : `I am a professional frontend developer with hands-on experience,
+            developing clean, scalable, and high-performance code with a focus
+            on appealing design and solid architecture. Clean code,
+            meaningful structures, and sustainable thinking are especially
+            important to me. I quickly familiarize myself with large projects and
+            contribute effectively to achieve high-quality results together. I
+            really enjoy working in teams. That’s why I actively contribute to
+            major open-source projects like
+            ` }}
+
         <a
           href="https://getbootstrap.com/"
           target="_blank"
           rel="noopener noreferrer"
-          >Bootstrap</a
         >
-        und
+          Bootstrap
+        </a>
+
+        {{ isDE ? " und " : " and " }}
+
         <a
           href="https://www.freecodecamp.org/"
           target="_blank"
           rel="noopener noreferrer"
-          >freeCodeCamp</a
         >
-        bei. Die Zusammenarbeit mit Designern und Backend-Entwicklern gehört für
-        mich selbstverständlich dazu, um Produkte zu schaffen, die nicht nur gut
-        aussehen, sondern auch zuverlässig funktionieren. Ich halte mich stets
-        über moderne Technologien auf dem Laufenden, lerne schnell neue Tools
-        und folge bewährten Methoden.
+          freeCodeCamp
+        </a>
+
+        {{ isDE
+          ? `bei. Die Zusammenarbeit mit Designern und Backend-Entwicklern gehört für
+            mich selbstverständlich dazu, um Produkte zu schaffen, die nicht nur gut
+            aussehen, sondern auch zuverlässig funktionieren. Ich halte mich stets
+            über moderne Technologien auf dem Laufenden, lerne schnell neue Tools
+            und folge bewährten Methoden.`
+          : ` projects. Collaborating with designers and backend developers is
+            naturally part of my work to create products that not only look good
+            but also function reliably. I always stay up-to-date with modern
+            technologies, learn new tools quickly, and follow best practices.` }}
       </p>
       <a href="#contact">
-        <button class="button button--outline">Let's talk</button>
+        <button class="button button--outline">
+          {{ isDE ? "Lass uns reden" : "Let's talk" }}
+        </button>
       </a>
     </div>
   </div>

@@ -1,9 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
+  styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  @Input() isDE!: boolean;
+  @Output() languageChange = new EventEmitter<boolean>();
+
+  setLanguage(de: boolean) {
+    this.languageChange.emit(de);
+  }
+}

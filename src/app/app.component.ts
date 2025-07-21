@@ -5,9 +5,13 @@ import { FooterComponent } from './shared/footer/footer.component';
 @Component({
   selector: 'app-root',
   imports: [MainComponent, FooterComponent],
-  templateUrl: './app.html',
-  styleUrl: './app.scss',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
 })
-export class App {
-  protected title = 'Portfolio';
+export class AppComponent {
+  isDE = false;
+
+  setLanguage(de: boolean) {
+    this.isDE = de;
+  }
 }
