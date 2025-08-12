@@ -171,6 +171,14 @@
     flex-direction: column;
     row-gap: 1.6rem;
 
+    & img {
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+
     @media (max-width: $Desktop) {
       right: -7%;
     }
