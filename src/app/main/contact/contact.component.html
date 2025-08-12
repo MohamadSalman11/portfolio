@@ -119,7 +119,7 @@
         <input type="checkbox" id="privacy" class="contact__checkbox-input" />
         <label for="privacy" class="contact__checkbox-label">
           {{ isDE ? "Ich habe die " : "I've read the " }}
-          <a href="#" class="contact__link">
+          <a [routerLink]="'/privacy-policy'" class="contact__link">
             {{ isDE ? "Datenschutzerklärung" : "privacy policy" }}
           </a>
           {{

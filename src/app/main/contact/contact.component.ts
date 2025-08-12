@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
   @Input() isDE!: boolean;
@@ -18,7 +20,12 @@ export class ContactComponent {
     message: '',
   };
 
+  constructor(private toastr: ToastrService) {}
+
   onSubmit(ngForm: NgForm) {
-    if (ngForm.valid && ngForm.submitted) ngForm.resetForm();
+    if (ngForm.valid && ngForm.submitted) {
+      this.toastr.success('Email sent successfully!');
+      ngForm.resetForm();
+    }
   }
 }

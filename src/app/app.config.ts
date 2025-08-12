@@ -1,12 +1,31 @@
 import {
   ApplicationConfig,
-  provideBrowserGlobalErrorListeners,
+  importProvidersFrom,
   provideZoneChangeDetection,
 } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
+import { PortfolioLayoutComponent } from './portfolio-layout/portfolio-layout.component';
+import { PrivacyPolicyComponent } from './privacy/privacy-policy.component';
+
+const routes: Routes = [
+  { path: '', component: PortfolioLayoutComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+];
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+};
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
+    importProvidersFrom(
+      BrowserAnimationsModule,
+      RouterModule.forRoot(routes, routerOptions),
+      ToastrModule.forRoot({ positionClass: 'toast-top-center' })
+    ),
   ],
 };

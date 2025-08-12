@@ -100,3 +100,13 @@ a {
     color: $color-white;
   }
 }
+
+.toast-success {
+  width: fit-content !important;
+  background-color: $color-primary-light !important;
+  color: $color-white !important;
+}
+
+.toast-message {
+  font-size: 1.4rem;
+}

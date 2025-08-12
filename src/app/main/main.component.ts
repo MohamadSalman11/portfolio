@@ -6,6 +6,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { CoursesComponent } from './courses/courses.component';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-main',
@@ -24,7 +25,10 @@ import { CoursesComponent } from './courses/courses.component';
 export class MainComponent {
   isDE = true;
 
+  constructor(private languageService: LanguageService) {}
+
   setLanguage(de: boolean) {
     this.isDE = de;
+    this.languageService.setLanguage(de);
   }
 }

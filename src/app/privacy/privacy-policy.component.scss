@@ -1,0 +1,53 @@
+@import "variables";
+
+.button-go-home {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 3.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: $color-primary-light-3;
+  }
+
+  img {
+    width: 2.5rem;
+  }
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: $color-primary;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.9rem;
+  color: $color-primary-light;
+}
+
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: $color-secondary;
+}
+
+h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.7rem;
+  color: $color-secondary-light;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  color: $color-secondary;
+}
