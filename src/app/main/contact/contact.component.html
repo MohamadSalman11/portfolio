@@ -116,21 +116,41 @@
       </div>
 
       <div class="contact__checkbox">
-        <input type="checkbox" id="privacy" class="contact__checkbox-input" />
-        <label for="privacy" class="contact__checkbox-label">
-          {{ isDE ? "Ich habe die " : "I've read the " }}
-          <a [routerLink]="'/privacy-policy'" class="contact__link">
-            {{ isDE ? "Datenschutzerklärung" : "privacy policy" }}
-          </a>
+        <div>
+          <input
+            type="checkbox"
+            id="privacy"
+            name="privacy"
+            class="contact__checkbox-input"
+            [(ngModel)]="contactData.privacyAccepted"
+            #privacy="ngModel"
+            required
+          />
+          <label for="privacy" class="contact__checkbox-label">
+            {{ isDE ? "Ich habe die " : "I've read the " }}
+            <a [routerLink]="'/privacy-policy'" class="contact__link">
+              {{ isDE ? "Datenschutzerklärung" : "privacy policy" }}
+            </a>
+            {{
+              isDE
+                ? " gelesen und stimme der Verarbeitung meiner Daten zu."
+                : " and agree to the processing of my data as outlined."
+            }}
+          </label>
+        </div>
+        <span
+          *ngIf="!privacy.valid && contactForm.submitted"
+          class="contact__error-text"
+        >
           {{
             isDE
-              ? " gelesen und stimme der Verarbeitung meiner Daten zu."
-              : " and agree to the processing of my data as outlined."
+              ? "Bitte akzeptieren Sie die Datenschutzerklärung"
+              : "Please accept the privacy policy"
           }}
-        </label>
+        </span>
       </div>
 
-      <button class="contact__button" type="submit">
+      <button class="contact__button button button--outline" type="submit">
         {{ isDE ? "Senden" : "Send" }}
       </button>
     </form>

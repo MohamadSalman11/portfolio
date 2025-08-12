@@ -18,6 +18,7 @@ export class ContactComponent {
     name: '',
     email: '',
     message: '',
+    privacyAccepted: false,
   };
 
   constructor(private toastr: ToastrService) {}
