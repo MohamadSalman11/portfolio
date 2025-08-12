@@ -13,25 +13,20 @@
     </div>
     <div class="me__description-box">
       <p>
-        {{ isDE
-          ? `Ich bin professioneller Frontend-Entwickler mit praktischer Erfahrung
-            und entwickle sauberen, skalierbaren und leistungsstarken Code mit Fokus
-            auf ansprechendes Design und solide Architektur. Sauberer Code,
-            sinnvolle Strukturen und nachhaltiges Denken sind für mich besonders
-            wichtig. Ich finde mich schnell in große Projekte ein und bringe mich
-            effektiv ein, um gemeinsam hochwertige Ergebnisse zu erzielen. Es macht
-            mir sehr viel Spaß, im Team zu arbeiten. Deshalb trage ich aktiv zu
-            großen Open-Source-Projekten wie
-            `
-          : `I am a professional frontend developer with hands-on experience,
-            developing clean, scalable, and high-performance code with a focus
-            on appealing design and solid architecture. Clean code,
-            meaningful structures, and sustainable thinking are especially
-            important to me. I quickly familiarize myself with large projects and
-            contribute effectively to achieve high-quality results together. I
-            really enjoy working in teams. That’s why I actively contribute to
-            major open-source projects like
-            ` }}
+        {{
+    isDE
+      ? `Ich bin professioneller Frontend-Entwickler mit praktischer Erfahrung
+         und entwickle sauberen, skalierbaren und leistungsstarken Code. Ich finde
+         mich schnell in große Projekte ein und bringe mich effektiv ein, um gemeinsam
+         hochwertige Ergebnisse zu erzielen. Es macht mir sehr viel Spaß, im Team zu arbeiten.
+         Deshalb trage ich aktiv zu großen Open-Source-Projekten bei, die von Millionen
+         Menschen genutzt werden, wie`
+      : `I am a professional frontend developer with practical experience
+         and write clean, scalable, and high-performance code. I quickly adapt to large projects
+         and contribute effectively to achieve high-quality results together. I really enjoy
+         working in a team. That’s why I actively contribute to major open-source projects
+         used by millions of people, such as`
+        }}
 
         <a
           href="https://getbootstrap.com/"
@@ -51,16 +46,18 @@
           freeCodeCamp
         </a>
 
-        {{ isDE
-          ? `bei. Die Zusammenarbeit mit Designern und Backend-Entwicklern gehört für
-            mich selbstverständlich dazu, um Produkte zu schaffen, die nicht nur gut
-            aussehen, sondern auch zuverlässig funktionieren. Ich halte mich stets
-            über moderne Technologien auf dem Laufenden, lerne schnell neue Tools
-            und folge bewährten Methoden.`
-          : ` projects. Collaborating with designers and backend developers is
-            naturally part of my work to create products that not only look good
-            but also function reliably. I always stay up-to-date with modern
-            technologies, learn new tools quickly, and follow best practices.` }}
+        {{
+    isDE
+      ? `. Die Zusammenarbeit mit Designern und Backend-Entwicklern gehört für
+          mich selbstverständlich dazu, um Produkte zu schaffen, die nicht nur gut
+          aussehen, sondern auch zuverlässig funktionieren. Ich halte mich stets
+          über moderne Technologien auf dem Laufenden, lerne schnell neue Tools
+          und folge bewährten Methoden.`
+      : `. Collaborating with designers and backend developers is naturally part
+          of my work to create products that not only look good but also function reliably.
+          I always stay up-to-date with modern technologies, learn new tools quickly,
+          and follow best practices.`
+        }}
       </p>
       <a href="#contact">
         <button class="button button--outline">
