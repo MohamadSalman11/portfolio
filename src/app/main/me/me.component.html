@@ -14,20 +14,10 @@
     <div class="me__description-box">
       <p>
         {{
-    isDE
-      ? `Ich bin professioneller Frontend-Entwickler mit praktischer Erfahrung
-         und entwickle sauberen, skalierbaren und leistungsstarken Code. Ich finde
-         mich schnell in große Projekte ein und bringe mich effektiv ein, um gemeinsam
-         hochwertige Ergebnisse zu erzielen. Es macht mir sehr viel Spaß, im Team zu arbeiten.
-         Deshalb trage ich aktiv zu großen Open-Source-Projekten bei, die von Millionen
-         Menschen genutzt werden, wie`
-      : `I am a professional frontend developer with practical experience
-         and write clean, scalable, and high-performance code. I quickly adapt to large projects
-         and contribute effectively to achieve high-quality results together. I really enjoy
-         working in a team. That’s why I actively contribute to major open-source projects
-         used by millions of people, such as`
+          isDE
+            ? "Als erfahrener Frontend-Entwickler habe ich an einer Vielzahl verschiedener Projekte gearbeitet und entwickle saubere, skalierbare, leistungsstarke und nutzerfreundliche Webanwendungen. Teamarbeit macht mir großen Spaß, deshalb arbeite ich aktiv in großen  Open-Source-Projekten wie "
+            : "As an experienced frontend developer, I have worked on a wide variety of projects and create clean, scalable, high-performance, and user-friendly web applications. I really enjoy teamwork, which is why I actively contribute to large projects like "
         }}
-
         <a
           href="https://getbootstrap.com/"
           target="_blank"
@@ -35,9 +25,7 @@
         >
           Bootstrap
         </a>
-
-        {{ isDE ? " und " : " and " }}
-
+        Framework {{ isDE ? " und " : " and " }}
         <a
           href="https://www.freecodecamp.org/"
           target="_blank"
@@ -45,18 +33,10 @@
         >
           freeCodeCamp
         </a>
-
         {{
-    isDE
-      ? `. Die Zusammenarbeit mit Designern und Backend-Entwicklern gehört für
-          mich selbstverständlich dazu, um Produkte zu schaffen, die nicht nur gut
-          aussehen, sondern auch zuverlässig funktionieren. Ich halte mich stets
-          über moderne Technologien auf dem Laufenden, lerne schnell neue Tools
-          und folge bewährten Methoden.`
-      : `. Collaborating with designers and backend developers is naturally part
-          of my work to create products that not only look good but also function reliably.
-          I always stay up-to-date with modern technologies, learn new tools quickly,
-          and follow best practices.`
+          isDE
+            ? "(Lernplattform), die von Millionen Menschen genutzt wird. Dort entwickle ich neue Features, behebe Bugs, teste und optimiere die Codequalität, sodass der Code klar strukturiert und konsistent bleibt. Modernste Technologien, neue Tools und bewährte Methoden gehören zu meinem Alltag. Ich lerne schnell und finde mich zügig in verschiedene, anspruchsvolle Projekte ein."
+            : "(learning platform), used by millions of people. There, I develop new features, fix bugs, test, and optimize code quality to ensure the code remains clean and consistent. Modern technologies, new tools, and best practices are part of my daily routine. I learn quickly and adapt efficiently to diverse, challenging projects."
         }}
       </p>
       <a href="#contact">
