@@ -3,16 +3,18 @@
 .navbar {
   padding: 1.6rem 2.8rem;
   background-color: $color-primary;
-  margin-top: 4.4rem;
   top: 0;
   position: sticky;
   z-index: 999;
+  margin-top: 4.4rem;
 
   @media (max-width: $TabLand) {
     margin-top: -11rem;
   }
 
   &__logo-white {
+    cursor: pointer;
+
     @media (max-width: $TabLand) {
       width: 4.5rem;
       height: 4.5rem;
@@ -142,5 +144,9 @@
         font-size: 1.6rem;
       }
     }
+  }
+
+  &-privacy {
+    margin-top: 0;
   }
 }

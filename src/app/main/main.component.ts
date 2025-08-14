@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from './hero/hero.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from '../shared/navbar/navbar.component';
 import { MeComponent } from './me/me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
