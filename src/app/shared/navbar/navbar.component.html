@@ -1,4 +1,4 @@
-<div class="navbar" [class.navbar-privacy]="isPrivacyPolicy">
+<div class="navbar" [class.navbar-route]="isRoute">
   <img
     class="navbar__icon-menu navbar__icon"
     src="/icons/menu.png"
@@ -24,19 +24,19 @@
 
     <nav>
       <ul class="navbar__list">
-        <li>
+        <li (click)="toggleMenu()">
           <a href="#me">{{ isDE ? "Warum Ich" : "Why Me" }}</a>
         </li>
-        <li>
+        <li (click)="toggleMenu()">
           <a href="#skills">Skills</a>
         </li>
-        <li>
+        <li (click)="toggleMenu()">
           <a href="#projects">{{ isDE ? "Projekte" : "Projects" }}</a>
         </li>
-        <li>
+        <li (click)="toggleMenu()">
           <a href="#courses">{{ isDE ? "Kurse" : "Courses" }}</a>
         </li>
-        <li>
+        <li (click)="toggleMenu()">
           <a href="#contact">{{ isDE ? "Kontakt" : "Contact" }}</a>
         </li>
       </ul>

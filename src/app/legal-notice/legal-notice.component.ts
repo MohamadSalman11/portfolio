@@ -1,18 +1,18 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { FooterComponent } from '../shared/footer/footer.component';
-import { NavbarComponent } from '../shared/navbar/navbar.component';
 import { LanguageService } from '../language.service';
 import { Subscription } from 'rxjs';
+import { FooterComponent } from '../shared/footer/footer.component';
+import { NavbarComponent } from '../shared/navbar/navbar.component';
 
 @Component({
-  selector: 'app-privacy-policy',
+  selector: 'app-legal-notice',
   standalone: true,
   imports: [NavbarComponent, FooterComponent],
-  templateUrl: './privacy-policy.component.html',
-  styleUrls: ['./privacy-policy.component.scss'],
+  templateUrl: './legal-notice.component.html',
+  styleUrl: './legal-notice.component.scss',
 })
-export class PrivacyPolicyComponent implements OnInit, OnDestroy {
+export class LegalNoticeComponent implements OnInit, OnDestroy {
   isDE: boolean;
   private subscription = new Subscription();
 
@@ -30,12 +30,12 @@ export class PrivacyPolicyComponent implements OnInit, OnDestroy {
     this.subscription.add(sub);
   }
 
-  goHome() {
-    this.router.navigate(['/'], { replaceUrl: true });
-  }
-
   switchLanguage(de: boolean) {
     this.languageService.setLanguage(de);
+  }
+
+  goHome() {
+    this.router.navigate(['/'], { replaceUrl: true });
   }
 
   ngOnDestroy() {

@@ -43,18 +43,6 @@
     @media (max-width: $TabPort) {
       display: none;
     }
-
-    &-mobile {
-      display: none;
-      position: absolute;
-      top: 1rem;
-      left: 2rem;
-      width: 4rem;
-
-      @media (max-width: $TabPort) {
-        display: block;
-      }
-    }
   }
 
   &__img-box {

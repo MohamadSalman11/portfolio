@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, Input, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 import { LanguageService } from '../../language.service';
@@ -11,8 +11,8 @@ import { LanguageService } from '../../language.service';
 })
 export class NavbarComponent implements OnDestroy {
   isMenuOpen = false;
-  isPrivacyPolicy = false;
-  isDE: boolean;
+  isRoute = false;
+  @Input() isDE: boolean = true;
 
   private subscriptions = new Subscription();
 
@@ -25,7 +25,7 @@ export class NavbarComponent implements OnDestroy {
     const routeSub = this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
-        this.isPrivacyPolicy = event.urlAfterRedirects === '/privacy-policy';
+        this.isRoute = event.urlAfterRedirects === '/';
       });
 
     const langSub = this.languageService.getLanguage().subscribe((de) => {

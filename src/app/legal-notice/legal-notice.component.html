@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<img class="logo-mobile" src="/logo-blue.png" alt="logo" (click)="goHome()" />
+<section class="legal-notice">
+  <h1>{{ isDE ? "Impressum" : "Legal notice" }}</h1>
+
+  <p>
+    Mohamad Salman<br />
+    Passauer Str. 92<br />
+    94060 Pocking
+  </p>
+
+  <h2>{{ isDE ? "Kontakt" : "Contact" }}</h2>
+  <p>
+    {{ isDE ? "Telefon: 0157 123 456 68" : "Phone: 0157 123 456 68" }}<br />
+    {{
+      isDE
+        ? "E-Mail: muhamad.salman.dev@gmail.com"
+        : "Email: muhamad.salman.dev@gmail.com"
+    }}
+  </p>
+
+  <p>
+    {{ isDE ? "Quelle:" : "Source:" }}
+    <a href="https://www.e-recht24.de">eRecht24</a>
+  </p>
+</section>
+
+<app-footer></app-footer>

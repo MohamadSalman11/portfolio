@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
@@ -8,4 +9,10 @@ import { Component, Input } from '@angular/core';
 })
 export class HeroComponent {
   @Input() isDE!: boolean;
+
+  constructor(private router: Router) {}
+
+  goHome() {
+    this.router.navigate(['/'], { replaceUrl: true });
+  }
 }
