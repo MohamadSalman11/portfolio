@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { FooterComponent } from '../shared/footer/footer.component';
-import { LanguageService } from '../language.service';
 import { NavbarComponent } from '../shared/navbar/navbar.component';
+import { LanguageService } from '../language.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -11,25 +12,33 @@ import { NavbarComponent } from '../shared/navbar/navbar.component';
   templateUrl: './privacy-policy.component.html',
   styleUrls: ['./privacy-policy.component.scss'],
 })
-export class PrivacyPolicyComponent implements OnInit {
-  isDE = true;
+export class PrivacyPolicyComponent implements OnInit, OnDestroy {
+  isDE: boolean;
+  private subscription = new Subscription();
 
   constructor(
     private router: Router,
     private languageService: LanguageService
-  ) {}
+  ) {
+    this.isDE = this.languageService.getCurrentLanguage();
+  }
 
   ngOnInit() {
-    this.languageService.getLanguage().subscribe((value) => {
+    const sub = this.languageService.getLanguage().subscribe((value) => {
       this.isDE = value;
     });
+    this.subscription.add(sub);
   }
 
   switchLanguage(de: boolean) {
-    this.isDE = de;
+    this.languageService.setLanguage(de);
   }
 
-  goHome(): void {
+  goHome() {
     this.router.navigate(['/'], { replaceUrl: true });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

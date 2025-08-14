@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { filter, Subscription } from 'rxjs';
 import { LanguageService } from '../../language.service';
 
 @Component({
@@ -9,32 +9,35 @@ import { LanguageService } from '../../language.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnDestroy {
   isMenuOpen = false;
   isPrivacyPolicy = false;
-  isDE = true;
+  isDE: boolean;
+
+  private subscriptions = new Subscription();
 
   constructor(
     private router: Router,
     private languageService: LanguageService
   ) {
-    this.router.events
+    this.isDE = this.languageService.getCurrentLanguage();
+
+    const routeSub = this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
         this.isPrivacyPolicy = event.urlAfterRedirects === '/privacy-policy';
       });
 
-    this.languageService.getLanguage().subscribe((de) => {
+    const langSub = this.languageService.getLanguage().subscribe((de) => {
       this.isDE = de;
     });
+
+    this.subscriptions.add(routeSub);
+    this.subscriptions.add(langSub);
   }
 
   setLanguage(de: boolean) {
     this.languageService.setLanguage(de);
-  }
-
-  goHome() {
-    this.router.navigate(['/']);
   }
 
   toggleMenu() {
@@ -43,5 +46,13 @@ export class NavbarComponent {
 
   closeMenu() {
     this.isMenuOpen = false;
+  }
+
+  goHome() {
+    this.router.navigate(['/']);
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.unsubscribe();
   }
 }

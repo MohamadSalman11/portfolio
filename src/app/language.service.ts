@@ -1,16 +1,27 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class LanguageService {
-  private isDESubject = new BehaviorSubject<boolean>(true);
-  getLanguage() {
-    return this.isDESubject.asObservable();
+  private languageSubject: BehaviorSubject<boolean>;
+
+  constructor() {
+    const saved = localStorage.getItem('isDE');
+    this.languageSubject = new BehaviorSubject<boolean>(
+      saved !== null ? JSON.parse(saved) : true
+    );
   }
 
-  setLanguage(isDE: boolean) {
-    this.isDESubject.next(isDE);
+  getLanguage() {
+    return this.languageSubject.asObservable();
+  }
+
+  setLanguage(de: boolean) {
+    localStorage.setItem('isDE', JSON.stringify(de));
+    this.languageSubject.next(de);
+  }
+
+  getCurrentLanguage(): boolean {
+    return this.languageSubject.value;
   }
 }
