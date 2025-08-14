@@ -25,7 +25,8 @@ export class NavbarComponent implements OnDestroy {
     const routeSub = this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
-        this.isRoute = event.urlAfterRedirects === '/';
+       const urlWithoutFragment = event.urlAfterRedirects.split('#')[0];
+       this.isRoute = urlWithoutFragment === '/';
       });
 
     const langSub = this.languageService.getLanguage().subscribe((de) => {
