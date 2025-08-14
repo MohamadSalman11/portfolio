@@ -12,26 +12,18 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: PortfolioLayoutComponent,
-    data: { title: 'Mohamad Salman | Portfolio' },
-  },
+  { path: '', component: PortfolioLayoutComponent, data: { titleKey: 'HOME' } },
   {
     path: 'privacy-policy',
     component: PrivacyPolicyComponent,
-    data: { title: 'Privacy Policy | Mohamad Salman' },
+    data: { titleKey: 'PRIVACY' },
   },
   {
     path: 'legal-notice',
     component: LegalNoticeComponent,
-    data: { title: 'Legal Notice | Mohamad Salman' },
+    data: { titleKey: 'LEGAL' },
   },
-  {
-    path: '**',
-    component: NotFoundComponent,
-    data: { title: '404 | Mohamad Salman' },
-  },
+  { path: '**', component: NotFoundComponent, data: { titleKey: 'NOT_FOUND' } },
 ];
 
 const routerOptions: ExtraOptions = {
