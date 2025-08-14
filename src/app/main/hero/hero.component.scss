@@ -72,31 +72,32 @@
   &__img {
     position: absolute;
     left: 50%;
-    top: -4.1rem;
+    top: -7rem;
     transform: translateX(-50%);
+    width: 74rem;
 
     @media (max-width: $Desktop) {
-      width: 45rem;
+      width: 60rem;
     }
 
     @media (max-width: $TabLand) {
-      width: 35rem;
+      width: 38rem;
     }
 
     @media (max-width: $TabPort) {
-      top: 6%;
+      top: 1%;
       border-radius: 200px;
     }
 
     @media (max-width: $Phone) {
       width: 30rem;
-      top: 3.5%;
+      top: 4%;
     }
   }
 
   &__bg-shape {
     @media (max-width: $Desktop) {
-      width: 40rem;
+      width: 45rem;
     }
 
     @media (max-width: $TabLand) {
@@ -114,6 +115,7 @@
 
   &__title {
     font-size: 8.6rem;
+    white-space: nowrap;
 
     @media (max-width: $Desktop) {
       font-size: 6.2rem;
