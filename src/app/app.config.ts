@@ -9,11 +9,13 @@ import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { PortfolioLayoutComponent } from './portfolio-layout/portfolio-layout.component';
 import { PrivacyPolicyComponent } from './privacy/privacy-policy.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: PortfolioLayoutComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: 'legal-notice', component: LegalNoticeComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 const routerOptions: ExtraOptions = {
