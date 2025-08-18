@@ -29,7 +29,7 @@ const routes: Routes = [
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
-  scrollOffset: [0, 120],
+  scrollOffset: [0, 60],
 };
 
 export const appConfig: ApplicationConfig = {
