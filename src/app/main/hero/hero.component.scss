@@ -4,6 +4,10 @@
   padding: 12.8rem;
   padding-bottom: 0;
 
+  @media (min-width: $Desktop) and (max-height: $TabPort) and (min-height: 53.125em) {
+    height: calc(100vh - 8.7rem);
+  }
+
   @media (max-width: $TabLand) {
     padding: 9.6rem;
   }
@@ -75,6 +79,11 @@
     top: -7rem;
     transform: translateX(-50%);
     width: 74rem;
+
+    @media (min-width: $Desktop) and (max-height: $TabPort) and (min-height: 53.125em) {
+      height: calc(100vh - 14rem);
+      width: auto;
+    }
 
     @media (max-width: $Desktop) {
       width: 60rem;

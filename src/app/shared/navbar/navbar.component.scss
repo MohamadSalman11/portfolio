@@ -140,7 +140,9 @@
   }
 
   &-route {
-    margin-top: 4.4rem;
+    @media (max-width: $Desktop) {
+      margin-top: 4.4rem;
+    }
 
     @media (max-width: $TabLand) {
       margin-top: -11rem;
