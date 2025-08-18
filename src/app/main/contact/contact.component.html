@@ -150,7 +150,11 @@
         </span>
       </div>
 
-      <button class="contact__button button button--outline" type="submit">
+      <button
+        class="contact__button button button--outline"
+        type="submit"
+        [disabled]="!contactData.privacyAccepted"
+      >
         {{ isDE ? "Senden" : "Send" }}
       </button>
     </form>

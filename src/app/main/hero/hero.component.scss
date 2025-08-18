@@ -150,20 +150,24 @@
     margin-top: 12.8rem;
     cursor: pointer;
 
-    img {
-      @media (max-width: $Desktop) {
-        margin-top: 4rem;
+    @media (max-width: $Desktop) {
+      margin-top: 4rem;
+
+      img {
         width: 3rem;
       }
+    }
 
-      @media (max-width: $TabLand) {
-        margin-top: 3rem;
+    @media (max-width: $TabLand) {
+      margin-top: 3rem;
+
+      img {
         width: 2rem;
       }
+    }
 
-      @media (max-width: $TabPort) {
-        width: 3rem;
-      }
+    @media (max-width: $TabPort) {
+      width: 3rem;
     }
   }
 

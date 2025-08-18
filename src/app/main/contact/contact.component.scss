@@ -118,6 +118,10 @@
     align-self: flex-end;
     padding: 0.8rem 2.4rem;
     font-size: 1.4rem;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
 
   .arrow-up-link {
