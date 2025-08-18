@@ -2,9 +2,12 @@
 
 .me {
   margin-top: $section-gap;
+  display: flex;
+  flex-direction: column;
 
   &__container {
     display: flex;
+    align-items: center;
     justify-content: center;
     column-gap: 8rem;
 
@@ -15,36 +18,47 @@
     }
   }
 
-  &__location-box {
+  &__info-list {
     display: flex;
-    align-items: center;
-    column-gap: 1.2rem;
-    font-size: 3rem;
-
-    img {
-      width: 7.5rem;
-    }
-
-    & > span {
-      white-space: nowrap;
-      span {
-        color: $color-primary;
-      }
-    }
+    flex-direction: column;
+    row-gap: 2.4rem;
+    margin-top: -6.2rem;
 
     @media (max-width: $TabPort) {
-      font-size: 2.4rem;
-
-      img {
-        width: 5rem;
-      }
+      margin-top: 0;
     }
 
-    @media (max-width: $Phone) {
-      font-size: 2rem;
+    & > div {
+      display: flex;
+      align-items: center;
+      column-gap: 1.2rem;
+      font-size: 3rem;
 
       img {
-        width: 4rem;
+        width: 7.5rem;
+      }
+
+      & > span {
+        white-space: nowrap;
+        span {
+          color: $color-primary;
+        }
+      }
+
+      @media (max-width: $TabPort) {
+        font-size: 2.4rem;
+
+        img {
+          width: 5rem;
+        }
+      }
+
+      @media (max-width: $Phone) {
+        font-size: 2rem;
+
+        img {
+          width: 4rem;
+        }
       }
     }
   }

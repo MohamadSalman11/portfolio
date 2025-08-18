@@ -1,15 +1,29 @@
 <section class="me" id="me">
   <h2 class="heading-secondary">{{ isDE ? "Warum Ich" : "Why Me" }}</h2>
   <div class="me__container">
-    <div class="me__location-box">
-      <img
-        src="/icons/location.png"
-        alt="{{ isDE ? 'Standort Symbol' : 'icon location' }}"
-      />
-      <span>
-        <span>{{ isDE ? "Ich bin" : "I am" }}</span>
-        {{ isDE ? "in Passau ansässig..." : "located in Passau..." }}|
-      </span>
+    <div class="me__info-list">
+      <div>
+        <img
+          class="me__info-icon"
+          src="/icons/location.png"
+          alt="{{ isDE ? 'Standort-Symbol' : 'location icon' }}"
+        />
+        <span class="me__info-text">
+          <span>{{ isDE ? "Ich bin" : "I am" }}</span>
+          {{ isDE ? "in Passau ansässig" : "located in Passau" }}
+        </span>
+      </div>
+      <div>
+        <img
+          class="me__info-icon"
+          src="/icons/remote-work.png"
+          alt="{{ isDE ? 'Remote-Arbeit-Symbol' : 'remote work icon' }}"
+        />
+        <span class="me__info-text">
+          <span>{{ isDE ? "Offen für" : "Open for" }}</span>
+          {{ isDE ? "Remote-Arbeit" : "remote work" }}
+        </span>
+      </div>
     </div>
     <div class="me__description-box">
       <p>
