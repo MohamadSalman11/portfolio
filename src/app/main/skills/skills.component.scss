@@ -109,5 +109,9 @@
     &-deployment {
       width: 5.5rem;
     }
+
+    &-code-review ~ span {
+      transform: translateY(-7px);
+    }
   }
 }
