@@ -4,6 +4,12 @@
   padding: 0;
   margin: 0;
   box-sizing: inherit;
+
+  &:focus-visible {
+    outline: none !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 0 0.5rem rgba($color-primary, 0.5);
+  }
 }
 
 html {
