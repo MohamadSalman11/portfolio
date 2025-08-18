@@ -1,10 +1,11 @@
 import { Component, Input, OnDestroy } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 import { LanguageService } from '../../language.service';
 
 @Component({
   selector: 'app-navbar',
+  imports: [RouterModule],
   standalone: true,
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
@@ -25,8 +26,8 @@ export class NavbarComponent implements OnDestroy {
     const routeSub = this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
-       const urlWithoutFragment = event.urlAfterRedirects.split('#')[0];
-       this.isRoute = urlWithoutFragment === '/';
+        const urlWithoutFragment = event.urlAfterRedirects.split('#')[0];
+        this.isRoute = urlWithoutFragment === '/';
       });
 
     const langSub = this.languageService.getLanguage().subscribe((de) => {

@@ -25,19 +25,27 @@
     <nav>
       <ul class="navbar__list">
         <li (click)="toggleMenu()">
-          <a href="#me">{{ isDE ? "Warum Ich" : "Why Me" }}</a>
+          <a [routerLink]="['/']" fragment="me">{{
+            isDE ? "Warum Ich" : "Why Me"
+          }}</a>
         </li>
         <li (click)="toggleMenu()">
-          <a href="#skills">Skills</a>
+          <a [routerLink]="['/']" fragment="skills">Skills</a>
         </li>
         <li (click)="toggleMenu()">
-          <a href="#projects">{{ isDE ? "Projekte" : "Projects" }}</a>
+          <a [routerLink]="['/']" fragment="projects">{{
+            isDE ? "Projekte" : "Projects"
+          }}</a>
         </li>
         <li (click)="toggleMenu()">
-          <a href="#courses">{{ isDE ? "Kurse" : "Courses" }}</a>
+          <a [routerLink]="['/']" fragment="courses">{{
+            isDE ? "Kurse" : "Courses"
+          }}</a>
         </li>
         <li (click)="toggleMenu()">
-          <a href="#contact">{{ isDE ? "Kontakt" : "Contact" }}</a>
+          <a [routerLink]="['/']" fragment="contact">{{
+            isDE ? "Kontakt" : "Contact"
+          }}</a>
         </li>
       </ul>
     </nav>
