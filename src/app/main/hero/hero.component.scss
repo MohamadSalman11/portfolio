@@ -146,22 +146,24 @@
     }
   }
 
-  &__icon--arrow-down {
+  &__link--arrow-down {
     margin-top: 12.8rem;
     cursor: pointer;
 
-    @media (max-width: $Desktop) {
-      margin-top: 4rem;
-      width: 3rem;
-    }
+    img {
+      @media (max-width: $Desktop) {
+        margin-top: 4rem;
+        width: 3rem;
+      }
 
-    @media (max-width: $TabLand) {
-      margin-top: 3rem;
-      width: 2rem;
-    }
+      @media (max-width: $TabLand) {
+        margin-top: 3rem;
+        width: 2rem;
+      }
 
-    @media (max-width: $TabPort) {
-      width: 3rem;
+      @media (max-width: $TabPort) {
+        width: 3rem;
+      }
     }
   }
 
@@ -172,6 +174,10 @@
     display: flex;
     flex-direction: column;
     row-gap: 1.6rem;
+
+    & > a {
+      height: 3rem;
+    }
 
     & img {
       transition: transform 0.2s ease;
