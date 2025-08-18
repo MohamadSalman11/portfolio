@@ -24,4 +24,86 @@
       color: $color-primary;
     }
   }
+
+  &__icon {
+    &-ts {
+      width: 7.2rem;
+
+      & ~ span {
+        transform: translateY(-1px);
+      }
+    }
+
+    &-scss {
+      width: 7rem;
+
+      & ~ span {
+        transform: translateY(-4px);
+      }
+    }
+
+    &-tailwind ~ span {
+      transform: translateY(-7.5px);
+    }
+
+    &-bootstrap ~ span {
+      transform: translateY(-6px);
+    }
+
+    &-styled-components {
+      width: 10rem;
+
+      ~ span {
+        transform: translateY(-19px);
+      }
+    }
+
+    &-firebase {
+      width: 6.7rem;
+
+      ~ span {
+        transform: translateY(-2px);
+      }
+    }
+
+    &-supabase {
+      width: 6.8rem;
+
+      ~ span {
+        transform: translateY(-2px);
+      }
+    }
+
+    &-testing {
+      width: 6.7rem;
+
+      ~ span {
+        transform: translateY(-2px);
+      }
+    }
+
+    &-git {
+      width: 6.7rem;
+
+      ~ span {
+        transform: translateY(-2px);
+      }
+    }
+
+    &-css {
+      width: 7.05rem;
+
+      & ~ span {
+        transform: translateY(-3px);
+      }
+    }
+
+    &-scrum {
+      width: 6.5rem;
+
+      ~ span {
+        transform: translateY(-2px);
+      }
+    }
+  }
 }
