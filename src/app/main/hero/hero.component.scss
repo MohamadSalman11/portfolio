@@ -99,7 +99,8 @@
     }
 
     @media (max-width: $Phone) {
-      width: 30rem;
+      max-width: 30rem;
+      width: 100%;
       top: 4%;
     }
   }
@@ -118,7 +119,8 @@
     }
 
     @media (max-width: $Phone) {
-      width: 30rem;
+      max-width: 30rem;
+      width: 100%;
     }
   }
 
